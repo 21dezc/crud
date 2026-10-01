@@ -71,7 +71,7 @@ export async function signUp(
 
       // สำคัญ:
       // ผู้สมัครใหม่จะเป็น USER เสมอ
-      role: "ADMIN",
+      role: "USER",
     },
   });
 
