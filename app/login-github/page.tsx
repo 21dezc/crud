@@ -6,8 +6,8 @@ export default async function LoginPage() {
   // if (session?.user) redirect('/')
 
   return (
-    <main className="mx-auto max-w-md px-5 py-20">
-      <section className="rounded-2xl border bg-white p-8 shadow-sm">
+    <main className="mx-auto max-w-md px-4 py-20">
+      <section className="rounded-2xl border border-slate-200 bg-white shadow-sm p-8">
         <h1 className="text-3xl font-bold">Members Only</h1>
         <p className="mt-3 text-slate-600">เข้าสู่ระบบด้วย github</p>
 
@@ -17,7 +17,7 @@ export default async function LoginPage() {
             await signIn("github", { redirectTo: "/" });
           }}
         >
-          <button className="mt-8 w-full rounded-lg bg-slate-950 px-5 py-3 font-medium text-white">
+          <button className="mt-8 w-full rounded-xl bg-slate-900 px-5 py-3 text-sm font-medium text-white hover:bg-slate-800">
             Continue with GitHub
           </button>
         </form>

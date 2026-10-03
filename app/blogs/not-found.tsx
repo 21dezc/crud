@@ -2,16 +2,16 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div style={{ padding: "32px", textAlign: "center" }}>
-      <h2 style={{ color: "#d93025" }}>404 - ไม่พบบทความนี้ในระบบ</h2>
-      <p style={{ color: "#666", marginTop: "8px" }}>
+    <div className="mx-auto max-w-md px-4 py-24 text-center">
+      <h2 className="text-xl font-bold text-rose-600">404 - ไม่พบบทความนี้ในระบบ</h2>
+      <p className="mt-2 text-sm text-slate-500">
         รหัสบทความที่คุณค้นหาไม่มีอยู่จริง หรืออาจถูกลบออกไปแล้ว
       </p>
 
-      <div style={{ marginTop: "20px" }}>
+      <div className="mt-6">
         <Link
           href="/blogs"
-          style={{ color: "#0070f3", textDecoration: "underline" }}
+          className="text-sm text-indigo-600 hover:underline"
         >
           ← ย้อนกลับไปยังหน้ารายการบทความทั้งหมด
         </Link>

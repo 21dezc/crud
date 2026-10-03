@@ -22,8 +22,8 @@ export default async function BlogDetailPage({
   }
 
   return (
-    <main style={{ padding: "24px" }}>
-      <h1>{blog.title}</h1>
+    <main className="mx-auto max-w-3xl px-4 py-10">
+      <h1 className="text-3xl font-bold">{blog.title}</h1>
     </main>
   );
 }

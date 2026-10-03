@@ -51,7 +51,7 @@ export default async function EditStudentPage({
 
     if (!student) {
         return (
-            <main className="mx-auto max-w-2xl px-4 py-10">
+            <main className="mx-auto max-w-2xl p-6">
                 <h1 className="text-2xl font-bold text-red-600">
                     ไม่พบข้อมูลนักศึกษา
                 </h1>
@@ -60,13 +60,13 @@ export default async function EditStudentPage({
     }
 
     return (
-        <main className="mx-auto max-w-2xl px-4 py-10">
+        <main className="mx-auto max-w-2xl p-6">
             <div className="mb-6">
-                <h1 className="text-2xl font-bold text-slate-900">
+                <h1 className="text-3xl font-bold text-gray-900">
                     แก้ไขนักศึกษา
                 </h1>
 
-                <p className="mt-1 text-sm text-slate-500">
+                <p className="mt-2 text-gray-600">
                     แก้ไขข้อมูลนักศึกษา ID: {student.id}
                 </p>
             </div>
@@ -77,12 +77,12 @@ export default async function EditStudentPage({
 
                     await updateStudent(studentId, formData);
                 }}
-                className="space-y-5 rounded-2xl border border-slate-200 bg-white shadow-sm p-6"
+                className="space-y-5 rounded-lg border border-gray-200 bg-white p-6 shadow-sm"
             >
                 <div>
                     <label
                         htmlFor="studentCode"
-                        className="mb-1.5 block text-sm font-medium text-slate-700"
+                        className="mb-2 block text-sm font-medium text-gray-700"
                     >
                         รหัสนักศึกษา
                     </label>
@@ -93,14 +93,14 @@ export default async function EditStudentPage({
                         name="studentCode"
                         defaultValue={student.studentCode}
                         required
-                        className="w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-sm shadow-sm placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-4 focus:ring-indigo-100 disabled:bg-slate-100"
+                        className="w-full rounded-md border border-gray-300 px-3 py-2"
                     />
                 </div>
 
                 <div>
                     <label
                         htmlFor="name"
-                        className="mb-1.5 block text-sm font-medium text-slate-700"
+                        className="mb-2 block text-sm font-medium text-gray-700"
                     >
                         ชื่อ-นามสกุล
                     </label>
@@ -111,14 +111,14 @@ export default async function EditStudentPage({
                         name="name"
                         defaultValue={student.name}
                         required
-                        className="w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-sm shadow-sm placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-4 focus:ring-indigo-100 disabled:bg-slate-100"
+                        className="w-full rounded-md border border-gray-300 px-3 py-2"
                     />
                 </div>
 
                 <div>
                     <label
                         htmlFor="email"
-                        className="mb-1.5 block text-sm font-medium text-slate-700"
+                        className="mb-2 block text-sm font-medium text-gray-700"
                     >
                         Email
                     </label>
@@ -128,14 +128,14 @@ export default async function EditStudentPage({
                         type="email"
                         name="email"
                         defaultValue={student.email ?? ""}
-                        className="w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-sm shadow-sm placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-4 focus:ring-indigo-100 disabled:bg-slate-100"
+                        className="w-full rounded-md border border-gray-300 px-3 py-2"
                     />
                 </div>
 
                 <div>
                     <label
                         htmlFor="major"
-                        className="mb-1.5 block text-sm font-medium text-slate-700"
+                        className="mb-2 block text-sm font-medium text-gray-700"
                     >
                         สาขา
                     </label>
@@ -146,14 +146,14 @@ export default async function EditStudentPage({
                         name="major"
                         defaultValue={student.major}
                         required
-                        className="w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-sm shadow-sm placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-4 focus:ring-indigo-100 disabled:bg-slate-100"
+                        className="w-full rounded-md border border-gray-300 px-3 py-2"
                     />
                 </div>
 
                 <div>
                     <label
                         htmlFor="year"
-                        className="mb-1.5 block text-sm font-medium text-slate-700"
+                        className="mb-2 block text-sm font-medium text-gray-700"
                     >
                         ชั้นปี
                     </label>
@@ -166,21 +166,21 @@ export default async function EditStudentPage({
                         min="1"
                         max="8"
                         required
-                        className="w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-sm shadow-sm placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-4 focus:ring-indigo-100 disabled:bg-slate-100"
+                        className="w-full rounded-md border border-gray-300 px-3 py-2"
                     />
                 </div>
 
-                <div className="flex gap-3 border-t border-slate-100 pt-5">
+                <div className="flex gap-3 pt-2">
                     <button
                         type="submit"
-                        className="inline-flex items-center justify-center rounded-xl px-4 py-2.5 text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 bg-indigo-600 text-white shadow-sm hover:bg-indigo-700"
+                        className="rounded-md bg-blue-600 px-5 py-2 font-medium text-white hover:bg-blue-700"
                     >
                         บันทึกการแก้ไข
                     </button>
 
                     <a
                         href="/students"
-                        className="inline-flex items-center justify-center rounded-xl px-4 py-2.5 text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 border border-slate-200 bg-white text-slate-700 hover:bg-slate-50"
+                        className="rounded-md border border-gray-300 px-5 py-2 font-medium text-gray-700 hover:bg-gray-50"
                     >
                         ยกเลิก
                     </a>
